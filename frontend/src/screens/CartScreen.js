@@ -91,7 +91,9 @@ const CartScreen = ( {match, location, history} ) => {
                         </ListGroup.Item>
 
                         <ListGroup.Item>
-                            <Button type='button' className = 'btn-block' disabled={cartItems.length === 0} onClick={checkoutHandler}>Proceed To Checkout</Button>
+                            <Button type='button' className = 'btn-block' disabled={cartItems.length === 0} onClick={checkoutHandler}>
+                                {cartItems.length !== 0 ? 'Proceed to Checkout' : 'Cart is empty'}
+                            </Button>
                         </ListGroup.Item>
                     </ListGroup>
                 </Card>
